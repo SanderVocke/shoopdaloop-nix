@@ -69,6 +69,10 @@
           mkdir /tmp/ppqsort
           cp -ar ${ppqsort-src}/* /tmp/ppqsort
           chmod -R 777 /tmp/ppqsort
+
+          mkdir /tmp/packageproject
+          cp -ar ${packageproject-src}/* /tmp/packageproject
+          chmod -R 777 /tmp/packageproject
         '';
 
         cmakeFlags = oldAttrs.cmakeFlags ++ [
@@ -76,7 +80,7 @@
           (nixpkgs.lib.cmakeFeature "CPM_ImGui_SOURCE" "/tmp/imgui")
           (nixpkgs.lib.cmakeFeature "CPM_nfd_SOURCE" "${nfd-src}")
           (nixpkgs.lib.cmakeFeature "CPM_PPQSort_SOURCE" "/tmp/ppqsort")
-          (nixpkgs.lib.cmakeFeature "CPM_PackageProject.cmake_SOURCE" "${packageproject-src}")
+          (nixpkgs.lib.cmakeFeature "CPM_PackageProject.cmake_SOURCE" "/tmp/packageproject")
         ];
       });
     in
