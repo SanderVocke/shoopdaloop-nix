@@ -46,7 +46,7 @@ let
 in
 rustPlatform.buildRustPackage {
   pname = "shoopdaloop";
-  version = "0.0.1";
+  version = "0.2.0";
 
   inherit src;
 
@@ -151,6 +151,13 @@ resource_dir = "$out/bin/resources"
 schemas_dir = "$out/bin/session_schemas"
 dynlibpaths = ["$out/lib"]
 EOF
+
+    # Install desktop entry and icon
+    mkdir -p $out/share/applications
+    cp distribution/linux/shoopdaloop.desktop $out/share/applications/
+    
+    mkdir -p $out/share/icons/hicolor/256x256/apps
+    cp distribution/linux/shoopdaloop.png $out/share/icons/hicolor/256x256/apps/shoopdaloop.png
   '';
 
   meta = with lib; {
