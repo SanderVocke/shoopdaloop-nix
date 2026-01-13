@@ -20,7 +20,13 @@
       packages.${system}.default = pkgs.callPackage ./default.nix { src = src; };
 
       devShells.${system}.default = pkgs.mkShell {
-        inputsFrom = [ self.packages.${system}.default ];
+        # For some reason, the qt6.wrapQtAppsHook is not picked up by the dev shell,
+        # so just don't use the hooks at all if used as such
+        inputsFrom = [
+          (self.packages.${system}.default.overrideAttrs (old: {
+            nativeBuildInputs = pkgs.lib.filter (p: p != pkgs.qt6.wrapQtAppsHook) (old.nativeBuildInputs or [ ]);
+          }))
+        ];
         
         packages = with pkgs; [
           # Additional dev tools
