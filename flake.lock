@@ -16,10 +16,27 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1768127708,
+        "narHash": "sha256-1Sm77VfZh3mU0F5OqKABNLWxOuDeHIlcFjsXeeiPazs=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ffbc9f8cbaacfb331b6017d5a5abb21a492c9a38",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "src": "src"
+        "src": "src",
+        "tracy-nix": "tracy-nix"
       }
     },
     "src": {
@@ -33,6 +50,24 @@
       "original": {
         "path": "/home/sander/dev/shoopdaloop",
         "type": "path"
+      }
+    },
+    "tracy-nix": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1768382859,
+        "narHash": "sha256-y6xGY2JES2P1IvhqDm4HBQ8NGEfjITrx70g0AouVKNc=",
+        "owner": "SanderVocke",
+        "repo": "tracy-nix",
+        "rev": "bf885a733768422071dd1db80046372175963c0a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SanderVocke",
+        "repo": "tracy-nix",
+        "type": "github"
       }
     }
   },
