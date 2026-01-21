@@ -40,6 +40,9 @@
 
         # Set environment variables for dev shell
         LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
+
+        # Disable hardening (doesn't work for full debug builds)
+        hardeningDisable = [ "fortify" ];
       };
     };
 }
