@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     src = {
-      url = "path:/home/sander/dev/shoopdaloop";
+      url = "github:SanderVocke/shoopdaloop";
       flake = false;
     };
     tracy-nix.url = "github:SanderVocke/tracy-nix";
