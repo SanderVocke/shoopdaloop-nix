@@ -6,6 +6,7 @@
     src = {
       url = "github:SanderVocke/shoopdaloop";
       flake = false;
+      submodules = true;
     };
     tracy-nix.url = "github:SanderVocke/tracy-nix";
   };
