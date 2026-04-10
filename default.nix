@@ -48,15 +48,7 @@ rustPlatform.buildRustPackage {
   pname = "shoopdaloop";
   version = "0.2.0";
 
-  # inherit src;
-
-  src = fetchFromGitHub {
-    owner = "SanderVocke";
-    repo = "shoopdaloop";
-    rev = "v0.2.0";
-    sha256 = "sha256-0000000000000000000=";
-    fetchSubmodules = true;
-  };
+  inherit src;
 
   cargoLock = {
     lockFile = "${src}/Cargo.lock";
