@@ -3,18 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-      src = fetchFromGitHub {
-      owner = "SanderVocke";
-      repo = "shoopdaloop";
-      rev = "v0.2.0";
-      sha256 = "sha256-0000000000000000000=";
-      fetchSubmodules = true;
+    src = {
+      url = "github:SanderVocke/shoopdaloop";
+      flake = false;
     };
-
-    # src = {
-    #   url = "github:SanderVocke/shoopdaloop";
-    #   flake = false;
-    # };
     tracy-nix.url = "github:SanderVocke/tracy-nix";
   };
 
