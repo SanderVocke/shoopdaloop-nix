@@ -32,6 +32,7 @@
 , lua5_4
 , stdenv
 , src
+, libb64
 }:
 
 let
@@ -65,6 +66,7 @@ rustPlatform.buildRustPackage {
     llvmPackages.libclang
     lua5_4
     qtEnv
+    libb64
   ];
 
   # Build inputs (libraries required at runtime/link time)
@@ -96,6 +98,7 @@ rustPlatform.buildRustPackage {
     cryptsetup
     nlohmann_json
     fmt
+    libb64
 
     # Graphics/X11
     xorg.libxcb

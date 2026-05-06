@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1768127708,
-        "narHash": "sha256-1Sm77VfZh3mU0F5OqKABNLWxOuDeHIlcFjsXeeiPazs=",
+        "lastModified": 1777578337,
+        "narHash": "sha256-Ad49moKWeXtKBJNy2ebiTQUEgdLyvGmTeykAQ9xM+Z4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "ffbc9f8cbaacfb331b6017d5a5abb21a492c9a38",
+        "rev": "15f4ee454b1dce334612fa6843b3e05cf546efab",
         "type": "github"
       },
       "original": {
@@ -42,14 +42,19 @@
     "src": {
       "flake": false,
       "locked": {
-        "lastModified": 1768300556,
-        "narHash": "sha256-SQZJVrc5h2QsVdgx+vkM6d/4Xd2eXtGwimMkLSEjH0Q=",
-        "path": "/home/sander/dev/shoopdaloop",
-        "type": "path"
+        "lastModified": 1777560807,
+        "narHash": "sha256-MHnXFEr1sLy7DU82MDkRCb8hzzOew+sJ8zWY9kB1lF0=",
+        "ref": "refs/heads/master",
+        "rev": "26fc74ac3f0e21345f75d134cb4ac93665e54b43",
+        "revCount": 457,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/SanderVocke/shoopdaloop.git"
       },
       "original": {
-        "path": "/home/sander/dev/shoopdaloop",
-        "type": "path"
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/SanderVocke/shoopdaloop.git"
       }
     },
     "tracy-nix": {
